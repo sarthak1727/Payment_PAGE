@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+</head>
+<body>
+    <h2>Complete Your Payment</h2>
+    <form action="https://sbcheckout.payfort.com/FortAPI/paymentPage" method="POST">
+        <input type="hidden" name="amount" value="1000">
+        <input type="hidden" name="currency" value="USD">
+        <input type="hidden" name="merchant_identifier" value="Your_Merchant_Identifier">
+        <input type="hidden" name="access_code" value="Your_Access_Code">
+        <input type="hidden" name="merchant_reference" value="123456">
+        <input type="hidden" name="customer_email" value="test@example.com">
+        <input type="hidden" name="command" value="AUTHORIZATION">
+        <input type="hidden" name="language" value="en">
+        <input type="hidden" name="return_url" value="https://your-server.com/return-url">
+        
+        <!-- Add other required hidden fields as per the documentation -->
+        
+        <input type="submit" value="Proceed to Payment">
+    </form>
+</body>
+</html>

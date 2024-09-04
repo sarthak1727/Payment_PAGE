@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Payment Gateway Integration</title>
+</head>
+<body>
+    <h1>Amazon Payment Gateway Integration</h1>
+    <button id="payButton">Pay Now</button>
+    
+    <!-- iFrame for Payment Form -->
+    
+    <iframe id="paymentFrame" style="display:none;" width="500" height="600"></iframe>
+    
+    <script>
+        document.getElementById('payButton').addEventListener('click', function() {
+            const paymentFrame = document.getElementById('paymentFrame');
+            paymentFrame.style.display = 'block';
+            paymentFrame.src = "two.html";
+        });
+    </script>
+</body>
+</html>
